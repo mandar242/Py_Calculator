@@ -16,7 +16,7 @@ class Calculator:
 
         root.title("Calculator")
 
-        root.geometry("600x600")
+        root.geometry("600x250")
 
         root.resizable(width=False, height=False)
 
@@ -29,7 +29,7 @@ class Calculator:
 
         self.number_entry.grid(row=0, columnspan=4)
 
-        #First Row of buttons
+        #First Row of Buttons
 
         self.button7 = ttk.Button(root, text="7",
                                   command=lambda: self.button_press('7')
@@ -47,6 +47,59 @@ class Calculator:
                                           command=lambda: self.math_button_press('/')
                                           ).grid(row=1, column=3)
 
+        #Seconf Row of Buttons
+
+        self.button4 = ttk.Button(root, text="4",
+                                  command=lambda: self.button_press('4')
+                                  ).grid(row=2, column=0)
+
+        self.button5 = ttk.Button(root, text="5",
+                                  command=lambda: self.button_press('5')
+                                  ).grid(row=2, column=1)
+
+        self.button6 = ttk.Button(root, text="6",
+                                  command=lambda: self.button_press('6')
+                                  ).grid(row=2, column=2)
+
+        self.button_multiplication = ttk.Button(root, text="*",
+                                          command=lambda: self.math_button_press('*')
+                                          ).grid(row=2, column=3)
+
+        #Third Row of Buttons
+
+        self.button1 = ttk.Button(root, text="1",
+                                  command=lambda: self.button_press('1')
+                                  ).grid(row=3, column=0)
+
+        self.button2 = ttk.Button(root, text="2",
+                                  command=lambda: self.button_press('2')
+                                  ).grid(row=3, column=1)
+
+        self.button3 = ttk.Button(root, text="3",
+                                  command=lambda: self.button_press('3')
+                                  ).grid(row=3, column=2)
+
+        self.button_addition = ttk.Button(root, text="+",
+                                                command=lambda: self.math_button_press('+')
+                                                ).grid(row=3, column=3)
+
+        #Fourth Row of Buttons
+
+        self.button1 = ttk.Button(root, text="AC",
+                                  command=lambda: self.button_press('AC')
+                                  ).grid(row=4, column=0)
+
+        self.button2 = ttk.Button(root, text="0",
+                                  command=lambda: self.button_press('0')
+                                  ).grid(row=4, column=1)
+
+        self.button3 = ttk.Button(root, text="=",
+                                  command=lambda: self.button_press('=')
+                                  ).grid(row=4, column=2)
+
+        self.button_addition = ttk.Button(root, text="-",
+                                          command=lambda: self.math_button_press('-')
+                                          ).grid(row=4, column=3)
 
 root = Tk()
 
